@@ -1,4 +1,5 @@
-# harbour-simplecrop
+# harbour-simplecrop Imageworks editor
+
 Sailfish OS Imageworks is the most complete photo editor and image manipulation app for SailfishOS to date. 
 
 It provides a huge amount of functions, effects and editing possibilities.
