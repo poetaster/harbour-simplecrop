@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 17.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="64px"
+   height="64px"
+   viewBox="0 0 64 64"
+   style="enable-background:new 0 0 64 64;"
+   xml:space="preserve"
+   sodipodi:docname="icon-m-transform.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
+   id="metadata15"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+   id="defs13"><inkscape:path-effect
+   effect="spiro"
+   id="path-effect833"
+   is_visible="true" />
+	
+	
+	
+</defs><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1055"
+   id="namedview11"
+   showgrid="false"
+   inkscape:zoom="5.2149125"
+   inkscape:cx="19.947236"
+   inkscape:cy="31.465899"
+   inkscape:window-x="1920"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<rect
+   y="0"
+   x="0"
+   height="64"
+   width="64"
+   style="opacity:0;fill:#ffffff"
+   id="icon-m-battery_1_" /><g
+   id="g7"
+   style="opacity:0.6">
+		<path
+   inkscape:connector-curvature="0"
+   id="path5"
+   d="M 49.729,54 H 14.272 C 11.917,54 10,52.083 10,49.728 V 14.272 C 10,11.917 11.917,10 14.272,10 H 49.729 C 52.084,10 54,11.917 54,14.272 V 49.727 C 54,52.083 52.084,54 49.729,54 Z M 14.272,12 C 13.019,12 12,13.02 12,14.272 V 49.727 C 12,50.98 13.019,52 14.272,52 H 49.729 C 50.981,52 52,50.98 52,49.728 V 14.272 C 52,13.02 50.981,12 49.729,12 Z"
+   style="fill:#ffffff" />
+	</g>
+<path
+   style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   d="m 22.755762,28.648064 h 18.488476 c 0.633891,0 0.997745,0.527469 1.144207,1.144208 l 4,16.84362 c 0.202857,0.854211 -0.70681,1.584777 -1.584776,1.584777 H 19.196333 c -0.877966,0 -1.787634,-0.730566 -1.584777,-1.584777 l 3.999999,-16.84362 c 0.146462,-0.616739 0.510316,-1.144208 1.144207,-1.144208 z"
+   id="rect831-6"
+   inkscape:connector-curvature="0"
+   sodipodi:nodetypes="sssssssss" /><circle
+   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   id="path1868"
+   cx="21.589546"
+   cy="28.707129"
+   r="1.777665" /><circle
+   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   id="path1868-0"
+   cx="42.145771"
+   cy="28.707129"
+   r="1.777665" /><circle
+   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   id="path1868-4"
+   cx="17.458471"
+   cy="47.663292"
+   r="1.777665" /><circle
+   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   id="path1868-4-8"
+   cx="46.580395"
+   cy="47.663292"
+   r="1.777665" /><path
+   inkscape:connector-curvature="0"
+   id="path1018-8"
+   d="m 32.005731,15.51703 4.728114,8.261833 -9.467007,-0.0064 z"
+   style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.80000013pt;stroke-opacity:1" /><path
+   inkscape:connector-curvature="0"
+   id="path1018-8-1"
+   d="m 32.005731,41.623812 4.728115,-8.261833 -9.467008,0.0064 z"
+   style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.80000013pt;stroke-opacity:1" /></svg>
