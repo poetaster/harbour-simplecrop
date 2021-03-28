@@ -35,8 +35,8 @@ DISTFILES += qml/harbour-simplecrop.qml \
     qml/pages/SharePage.qml \
     qml/pages/ViewPage.qml \
     qml/pages/perspectivetransformhelper.js \
-    rpm/harbour-simplecrop.changes.in \
-    rpm/harbour-simplecrop.changes.run.in \
+    rpm/harbour-simplecrop.changes \
+    rpm/harbour-simplecrop.changes.run \
     rpm/harbour-simplecrop.spec \
     rpm/harbour-simplecrop.yaml \
     translations/*.ts \
@@ -52,7 +52,7 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/harbour-simplecrop-de.ts
+# TRANSLATIONS += translations/harbour-simplecrop-de.ts
 
 HEADERS +=
 
