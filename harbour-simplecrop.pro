@@ -18,6 +18,7 @@ SOURCES += src/harbour-simplecrop.cpp \
 
 
 DISTFILES += qml/harbour-simplecrop.qml \
+    lib/PIL/*.py \
     qml/cover/CoverPage.qml \
     qml/pages/ChannelBench.qml \
     qml/pages/CollageBench.qml \
@@ -56,6 +57,6 @@ TRANSLATIONS += translations/harbour-simplecrop-de.ts
 HEADERS +=
 
 # include a static library
-#python.files = lib/*
-#python.path = /usr/share/harbour-simplecrop/lib
-#INSTALLS += python
+python.files = lib/*
+python.path = "/usr/share/harbour-simplecrop/lib"
+INSTALLS += python
