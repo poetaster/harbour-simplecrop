@@ -18,7 +18,7 @@ SOURCES += src/harbour-simplecrop.cpp \
 
 
 DISTFILES += qml/harbour-simplecrop.qml \
-    lib/PIL/*.py \
+    lib/PIL/* \
     qml/cover/CoverPage.qml \
     qml/pages/ChannelBench.qml \
     qml/pages/CollageBench.qml \
