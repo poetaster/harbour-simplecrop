@@ -4,6 +4,7 @@
 # POETASTER
 import sys
 sys.path.append('/usr/share/harbour-simplecrop/lib/')
+sys.path.append('/usr/share/harbour-simplecrop/lib/arm32')
 # POETASTER
 
 import pyotherside
