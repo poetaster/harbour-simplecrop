@@ -8,12 +8,12 @@ Name:       harbour-simplecrop
 # >> macros
 # << macros
 
-Summary:    SimpleCropper
-Version:    0.6.3
-Release:    0
+Summary:    Imageworks image editor
+Version:    0.6.4
+Release:    1
 Group:      Qt/Qt
-License:    MIT
-URL:        http://example.org/
+License:    GPLv3
+URL:        https://github.com/poetaster/harbour-simplecrop
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-simplecrop.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
