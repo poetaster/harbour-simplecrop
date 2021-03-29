@@ -56,7 +56,24 @@ CONFIG += sailfishapp_i18n
 
 HEADERS +=
 
+# include library according to architecture (arm, i486_32bit, arm64)
+equals(QT_ARCH, arm): {
+  pil_static.files = lib/arm32/*
+  message("!!!architecture armv7hl detected!!!");
+}
+equals(QT_ARCH, i386): {
+  pil_static.files = lib/x86_32/*
+  message("!!!architecture x86 / 32bit detected!!!");
+}
+# equals(QT_ARCH, arm64): {
+#  pil_static.files = lib/ffmpeg/arm64/*
+#  message("!!!architecture arm64 detected!!!");
+#}*/
+
+
+INSTALLS += pil_static
+
 # include a static library
-python.files = lib/*
+python.files = pil_static.files
 python.path = "/usr/share/harbour-simplecrop/lib"
 INSTALLS += python
