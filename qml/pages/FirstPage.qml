@@ -25,8 +25,8 @@ Page {
     property string origImageFilePath : ""
     property string origImageFileName
     property string origImageFolderPath
-    property string tempImageFolderPath //: "/home" + "/nemo" + "/.imageworks_tmp/"
-    property string saveImageFolderPath //: "/home" + "/nemo" + "/Pictures" + "/Imageworks/"
+    property string tempImageFolderPath //: "/home" + "/defaultuser" + "/.imageworks_tmp/"
+    property string saveImageFolderPath //: "/home" + "/defaultuser" + "/Pictures" + "/Imageworks/"
     property string symbolSourceFolder: "/usr" + "/share" + "/harbour-simplecrop" + "/qml" + "/symbols/"
     property string filterSourceFolder: "/usr" + "/share" + "/harbour-simplecrop" + "/qml" + "/filters/"
     property string fontSourceFolder: "/usr" + "/share" + "/harbour-simplecrop" + "/qml" + "/fonts/"

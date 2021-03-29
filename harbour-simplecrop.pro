@@ -18,7 +18,7 @@ SOURCES += src/harbour-simplecrop.cpp \
 
 
 DISTFILES += qml/harbour-simplecrop.qml \
-    lib/arm32/PIL/*  \
+    lib/PIL/*.py \
     qml/cover/CoverPage.qml \
     qml/pages/ChannelBench.qml \
     qml/pages/CollageBench.qml \
@@ -35,8 +35,8 @@ DISTFILES += qml/harbour-simplecrop.qml \
     qml/pages/SharePage.qml \
     qml/pages/ViewPage.qml \
     qml/pages/perspectivetransformhelper.js \
-    rpm/harbour-simplecrop.changes \
-    rpm/harbour-simplecrop.changes.run \
+    rpm/harbour-simplecrop.changes.in \
+    rpm/harbour-simplecrop.changes.run.in \
     rpm/harbour-simplecrop.spec \
     rpm/harbour-simplecrop.yaml \
     translations/*.ts \
@@ -76,6 +76,6 @@ HEADERS +=
 #INSTALLS += pil_static.files
 
 # include a static library
-python.files = lib/arm32/*
+python.files = lib/*
 python.path = "/usr/share/harbour-simplecrop/lib"
 INSTALLS += python

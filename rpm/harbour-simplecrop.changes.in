@@ -12,8 +12,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Sun Mar 28 2021 mark washeim <blueprint@poetaster.de> 0.6.4
-- Modified pro to install python dependancies
-- added PIL directories to project/lib
-- modified python program to load libs.
+#* Sun Mar 28 2021 mark washeim <blueprint@poetaster.de> 0.6.4
+#- Modified pro to install python dependancies
+#- added PIL directories to project/lib
+#- modified python program to load libs.
 
