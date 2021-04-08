@@ -63,8 +63,8 @@ def argb2alpha ( paintColor ) :
     return alphaValue
 
 def createTmpAndSaveFolder ( tempImageFolderPath, saveImageFolderPath ):
-    if os.path.exists("/" + "/home" + "/nemo" + "/imageworks_tmp/"): #if folder exists from older versions, remove it
-        shutil.rmtree("/" + "/home" + "/nemo" + "/imageworks_tmp/")
+    if os.path.exists("/" + "/home" + "/defaultuser" + "/imageworks_tmp/"): #if folder exists from older versions, remove it
+        shutil.rmtree("/" + "/home" + "/defaultuser" + "/imageworks_tmp/")
     if not os.path.exists("/"+tempImageFolderPath):
         os.makedirs("/"+tempImageFolderPath)
         pyotherside.send('folderExistence', )

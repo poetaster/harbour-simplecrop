@@ -18,9 +18,6 @@ SOURCES += src/harbour-simplecrop.cpp \
 
 
 DISTFILES += qml/harbour-simplecrop.qml \
-    #lib/PIL/* \
-    #lib/x86_32/PIL/__init__.py \
-    lib/x86_32/PIL/BdfFontFile.py \
     qml/cover/CoverPage.qml \
     qml/pages/ChannelBench.qml \
     qml/pages/CollageBench.qml \
