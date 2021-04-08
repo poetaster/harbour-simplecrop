@@ -7,10 +7,12 @@ Name:       harbour-simplecrop
 
 # >> macros
 # << macros
+%define __requires_exclude ^_imaging*|libfreetype|libjpeg|libopenjp2|libtiff|libfreetype.*$
+%define __provides_exclude ^_imaging*|libfreetype|libjpeg|libopenjp2|libtiff|libfreetype.*$
 
 Summary:    Imageworks image editor
-Version:    0.6.4
-Release:    0
+Version:    1.6.4
+Release:    1.6.4
 Group:      Qt/Qt
 License:    GPLv3
 URL:        https://github.com/poetaster/harbour-simplecrop
@@ -64,5 +66,6 @@ desktop-file-install --delete-original       \
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
+%attr(644,root,root) %{_datadir}/%{name}/qml/py/graphx.py
 # >> files
 # << files

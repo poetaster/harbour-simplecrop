@@ -1182,39 +1182,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Make sure you have only ONE of them installed!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1) Download the latest file suitable for your device:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>     Smartphones usually ...armv7hl.rpm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>     Tablets possibly ...i486.rpm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2) Allow &apos;3rd party software&apos; in Sailfish settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>3) Install python3-pillow manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>tobias.planitzer@protonmail.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Photo editor for SailfishOS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Active development of Imageworks has been completed. However, if you would like to send some greetings, report a bug or even sponsor further development, please contact me here:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1222,15 +1190,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HOW TO</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>CONTACT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This app requires SailfishOS 3.3+ and python3-pillow library in version 7+ which is available on Openrepos.net.</source>
+        <source>Active development of Imageworks takes place at https://github.com/poetaster/harbour-simplecrop:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imageworks was developed by tobias.planitzer@protonmail.com and is maintained by blueprint@poetaster.de</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This app requires SailfishOS 3.3+.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

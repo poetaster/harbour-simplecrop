@@ -18,7 +18,8 @@ SOURCES += src/harbour-simplecrop.cpp \
 
 
 DISTFILES += qml/harbour-simplecrop.qml \
-    lib/PIL/* \
+    #lib/PIL/* \
+    lib/x86_32/PIL/__init__.py \
     qml/cover/CoverPage.qml \
     qml/pages/ChannelBench.qml \
     qml/pages/CollageBench.qml \
@@ -57,25 +58,34 @@ CONFIG += sailfishapp_i18n
 HEADERS +=
 
 # include library according to architecture (arm, i486_32bit, arm64)
-#pil_static.files = lib/arm32/*
+#pil_static.path = lib/*
 
 #equals(QT_ARCH, arm): {
-#  pil_static.files = lib/arm32/*
+#  pil_static.path = lib/*
 #  message("!!!architecture armv7hl detected!!!");
 #}
 #equals(QT_ARCH, i386): {
-#  pil_static.files = lib/x86_32/*
+#  pil_static.path = lib/x86_32/*
 #  message("!!!architecture x86 / 32bit detected!!!");
 #}
 #equals(QT_ARCH, arm64): {
 #  pil_static.files = lib/arm64/*
 #  message("!!!architecture arm64 detected!!!");
 #}
-
-
-#INSTALLS += pil_static.files
+# for instance ffmpeg_static.path = /usr/share/harbour-clipper/lib/ffmpeg
+# INSTALLS += pil_static
 
 # include a static library
-python.files = lib/*
+equals(QT_ARCH, i386): {
+  python.files = lib/x86_32/*
+  DISTFILES += lib/PIL/x86_32/PIL/* \
+  message("!!!architecture x86 / 32bit detected!!!");
+}
+equals(QT_ARCH, arm): {
+  python.files = lib/arm/*
+  DISTFILES += lib/arm/PIL/* \
+  message("!!!architecture armv7hl detected!!!");
+}
+
 python.path = "/usr/share/harbour-simplecrop/lib"
 INSTALLS += python

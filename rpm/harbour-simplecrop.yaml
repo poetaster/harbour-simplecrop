@@ -1,7 +1,7 @@
 Name: harbour-simplecrop
 Summary: Imageworks image editor
-Version: 0.6.4
-Release: 0
+Version: 1.6.4
+Release: 1.6.4
 # The contents of the Group field should be one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group: Qt/Qt
@@ -39,6 +39,20 @@ Files:
   - '%{_datadir}/%{name}'
   - '%{_datadir}/applications/%{name}.desktop'
   - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
+  - '%attr(644,root,root) %{_datadir}/%{name}/qml/py/graphx.py'
+
+Macros:
+#  - '__provides_exclude_from;^%{_datadir}/%{name}/lib/*$'
+#  - '__requires_exclude_from;^%{_datadir}/%{name}/lib/*$'
+  - '__requires_exclude;^_imaging*|libfreetype|libjpeg|libopenjp2|libtiff|libfreetype.*$'
+  - '__provides_exclude;^_imaging*|libfreetype|libjpeg|libopenjp2|libtiff|libfreetype.*$'
+#  - '__provides_exclude;^_imagingtk\\.cpython-38-arm-linux-gnueabihf\\.so|_imagingmorph\\.cpython-37-arm-linux-gnueabihf\\.so|_imagingmath\\.cpython-38-arm-linux-gnueabihf\\.so|_imagingft\\.cpython-38-arm-linux-gnueabihf\\.so|_imagingft\\.cpython-38-arm-linux-gnueabihf\\.so|_imagingft\\.cpython-38-arm-linux-gnueabihf\\.so.*$'
+#  - '__requires_exclude;^libfreetype|libjpeg|libopenjp2|libtiff|libfreetype.*$'
 
 # For more information about yaml and what is supported in Sailfish OS
-# build system, please see https://wiki.merproject.org/wiki/Spectacle
+# build system, please see https://wiki.merproject.libfreetype|libjpeg|libopenjp2|libtiff|libfreetype.*$org/wiki/Spectacle
+
+# Do not check .so files in an application-specific library directory
+# or any files in the application's data directory for provides
+
+
