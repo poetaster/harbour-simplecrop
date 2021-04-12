@@ -7,12 +7,12 @@ Name:       harbour-simplecrop
 
 # >> macros
 # << macros
-%define __requires_exclude ^_imaging*|libfreetype|libjpeg|libopenjp2|libtiff|libfreetype.*$
-%define __provides_exclude ^_imaging*|libfreetype|libjpeg|libopenjp2|libtiff|libfreetype.*$
+%define __provides_exclude_from ^%{_datadir}/%{name}/lib/.*\\.so\\>
+%define __requires_exclude_from ^%{_datadir}/%{name}/lib/.*\\.so\\>
 
 Summary:    Imageworks image editor
-Version:    1.6.4
-Release:    1.6.4
+Version:    1.0
+Release:    1
 Group:      Qt/Qt
 License:    GPLv3
 URL:        https://github.com/poetaster/harbour-simplecrop
@@ -54,6 +54,14 @@ rm -rf %{buildroot}
 %qmake5_install
 
 # >> install post
+install -t %{buildroot}/%{_datadir}/%{name}/lib/ \
+    /usr/lib/libjpeg.so.62 \
+    /usr/lib/libopenjp2.so.7 \
+    /usr/lib/libtiff.so.5 \
+    /usr/lib/libfreetype.so.6 \
+    /usr/lib/libwebpdemux.so.2 \
+    /usr/lib/libwebpmux.so.3 \
+    /usr/lib/libwebp.so.7
 # << install post
 
 desktop-file-install --delete-original       \
