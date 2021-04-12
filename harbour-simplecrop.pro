@@ -57,14 +57,6 @@ HEADERS +=
 # include library according to architecture (arm, i486_32bit, arm64)
 #pil_static.path = lib/*
 
-#equals(QT_ARCH, arm): {
-#  pil_static.path = lib/*
-#  message("!!!architecture armv7hl detected!!!");
-#}
-#equals(QT_ARCH, i386): {
-#  pil_static.path = lib/x86_32/*
-#  message("!!!architecture x86 / 32bit detected!!!");
-#}
 #equals(QT_ARCH, arm64): {
 #  pil_static.files = lib/arm64/*
 #  message("!!!architecture arm64 detected!!!");
@@ -79,8 +71,8 @@ equals(QT_ARCH, i386): {
   message("!!!architecture x86 / 32bit detected!!!");
 }
 equals(QT_ARCH, arm): {
-  python.files = lib/arm/*
-  DISTFILES += lib/arm/PIL/* \
+  python.files = lib/arm32/*
+  DISTFILES += lib/arm32/PIL/* \
   message("!!!architecture armv7hl detected!!!");
 }
 
