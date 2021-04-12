@@ -3783,28 +3783,6 @@ Page {
                     enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true && templock === -1 ) ? true : false
                     width: parent.width / itemsPerRow
                     height: Theme.itemSizeSmall
-                    icon.source: "image://theme/icon-m-share?"
-                    onClicked: {
-                        pageStack.push(Qt.resolvedUrl("SharePage.qml"), {
-                            shareFilePath : idImageLoadedFreecrop.source.toString(),
-                            shareFileName : origImageFileName,
-                        })
-                    }
-                    Label {
-                        horizontalAlignment: Text.AlignHCenter
-                        text: qsTr("share")
-                        font.pixelSize: Theme.fontSizeExtraSmall
-                        anchors {
-                            top: parent.bottom
-                            topMargin: -Theme.paddingSmall
-                            horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-                IconButton {
-                    enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true && templock === -1 ) ? true : false
-                    width: parent.width / itemsPerRow
-                    height: Theme.itemSizeSmall
                     //icon.source: "image://theme/icon-m-font-size?"
                     icon.source : "../symbols/icon-m-rename.svg"
                     icon.width: Theme.iconSizeMedium
@@ -3890,7 +3868,7 @@ Page {
                     icon.width: Theme.iconSizeMedium
                     icon.height: Theme.iconSizeMedium
                     onClicked: {
-                        pageStack.push(Qt.resolvedUrl("InfoPage.qml"))
+                        pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
                     }
                     Label {
                         horizontalAlignment: Text.AlignHCenter

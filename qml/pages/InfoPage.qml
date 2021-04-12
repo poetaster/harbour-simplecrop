@@ -1,12 +1,13 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-import io.thp.pyotherside 1.5
 
 
 Page {
     id: page
     allowedOrientations: Orientation.Portrait //All
-
+    PageHeader {
+        title: qsTr("About Imageworks")
+    }
     SilicaFlickable {
         id: listView
         anchors.fill: parent
@@ -24,20 +25,6 @@ Page {
 
                 Column {
                     width: parent.width - Theme.itemSizeSmall - spacing
-                    Label {
-                        anchors.right: parent.right
-                        font.pixelSize: Theme.fontSizeLarge
-                        color: Theme.highlightColor
-                        text: qsTr("Imageworks")
-                    }
-                    Label {
-                        anchors.right: parent.right
-                        font.pixelSize: Theme.fontSizeTiny
-                        color: Theme.highlightColor
-                        text: qsTr("Photo editor for SailfishOS") + "\n "
-                    }
-                }
-
                 Image {
                     width: Theme.itemSizeSmall
                     source: "../cover/imageworks.svg"
@@ -45,41 +32,34 @@ Page {
                     sourceSize.height: Theme.itemSizeSmall
                     fillMode: Image.PreserveAspectFit
                 }
+                Item {
+                    width: parent.width
+                    height: idSectionHeader.height + Theme.paddingLarge * 3
+                }
+                Label {
+                    width: parent.width
+                    horizontalAlignment: Text.AlignHCenter
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    color: Theme.secondaryColor
+                    text: qsTr("Copyright © 2020 Tobias Planitzer")
+                          + qsTr(" © 2021 Mark Washeim")
+                }
+                Item {
+                    width: parent.width
+                    height: idSectionHeader.height + Theme.paddingLarge * 3
+                }
+                Label {
+                    x: Theme.paddingLarge
+                    width: parent.width - 2 * Theme.paddingLarge
+                    wrapMode: Text.Wrap
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    text: qsTr("Feedback: https://github.com/poetaster/harbour-simplecrop:")
+                }
+
+                }
             }
         }
 
-        Column {
-            id: columnSaveAs
-            width: parent.width
-
-            Item {
-                width: parent.width
-                height: idSectionHeader.height + Theme.paddingLarge * 3
-            }
-
-            Label {
-                x: Theme.paddingLarge
-                width: parent.width - 2 * Theme.paddingLarge
-                wrapMode: Text.Wrap
-                font.pixelSize: Theme.fontSizeExtraSmall
-                text: qsTr("CONTACT") + "\n"
-                    + qsTr("Active development of Imageworks takes place at https://github.com/poetaster/harbour-simplecrop:") + " "
-                    + qsTr("Imageworks was developed by tobias.planitzer@protonmail.com and is maintained by blueprint@poetaster.de") + "."
-                    + "\n"
-            }
-
-            Label {
-                x: Theme.paddingLarge
-                width: parent.width - 2 * Theme.paddingLarge
-                wrapMode: Text.Wrap
-                font.pixelSize: Theme.fontSizeExtraSmall
-                text: qsTr("INSTALL") + "\n"
-                    + qsTr("This app requires SailfishOS 3.3+.")
-
-            }
-
-
-        } // end Column
 
 
 

@@ -19,6 +19,7 @@ SOURCES += src/harbour-simplecrop.cpp \
 
 DISTFILES += qml/harbour-simplecrop.qml \
     qml/cover/CoverPage.qml \
+    qml/pages/AboutPage.qml \
     qml/pages/ChannelBench.qml \
     qml/pages/CollageBench.qml \
     qml/pages/ColorcurveBench.qml \
@@ -31,7 +32,6 @@ DISTFILES += qml/harbour-simplecrop.qml \
     qml/pages/PixelBench.qml \
     qml/pages/RenamePage.qml \
     qml/pages/SavePage.qml \
-    qml/pages/SharePage.qml \
     qml/pages/ViewPage.qml \
     qml/pages/perspectivetransformhelper.js \
     rpm/harbour-simplecrop.changes.in \
@@ -75,6 +75,11 @@ equals(QT_ARCH, arm): {
   DISTFILES += lib/arm32/PIL/* \
   message("!!!architecture armv7hl detected!!!");
 }
+#equals(QT_ARCH, arm64): {
+#  python.files = lib/arm32/*
+#  DISTFILES += lib/arm32/PIL/* \
+#  message("!!!architecture armv7hl detected!!!");
+#}
 
 python.path = "/usr/share/harbour-simplecrop/lib"
 INSTALLS += python

@@ -12,7 +12,7 @@ Name:       harbour-simplecrop
 
 Summary:    Imageworks image editor
 Version:    1.0
-Release:    1
+Release:    2
 Group:      Qt/Qt
 License:    GPLv3
 URL:        https://github.com/poetaster/harbour-simplecrop
