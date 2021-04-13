@@ -68,15 +68,30 @@ Page {
             font.pixelSize: Theme.fontSizeSmall
             color: Theme.secondaryColor
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-            text: qsTr("Tidings is open source software licensed under the terms of ")
-                  + qsTr("the GNU General Public License.")
+            text: qsTr("Imageworks is open source software licensed under the terms of ")
+                  + qsTr("the GNU General Public License v3.")
         }
 
-        /*Item {
+        Item {
             width: 1
             height: 2 * Theme.paddingLarge
         }
 
+        Label {
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottomMargin: Theme.paddingSmall
+            color: Theme.secondaryColor
+            textFormat: Text.StyledText
+            linkColor: Theme.highlightColor
+            font.pixelSize: Theme.fontSizeSmall
+            text: "<a href=\"https://github.com/poetaster/harbour-simplecrop\">Source: github</a>"
+            /*text: "<style>a:link{color: " + Theme.highlightColor + ";}</style>" +  "<a href=\"https://github.com/poetaster/harbour-simplecrop\">Source: github</a>" */
+            onLinkActivated: {
+                console.log("Opening external browser: " + link);
+                Qt.openUrlExternally(link)
+            }
+        }
+        /*
         Button {
             anchors.horizontalCenter: parent.horizontalCenter
             text: qsTr("View license")
@@ -86,14 +101,4 @@ Page {
         }*/
 
     }
-
-    Label {
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: Theme.paddingSmall
-        color: Theme.secondaryColor
-        font.pixelSize: Theme.fontSizeTiny
-        text: "https://github.com/poetaster/harbour-simplecrop"
-    }
-
 }

@@ -20,11 +20,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tidings is open source software licensed under the terms of </source>
+        <source>Imageworks is open source software licensed under the terms of </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>the GNU General Public License.</source>
+        <source>the GNU General Public License v3.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

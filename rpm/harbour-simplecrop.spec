@@ -6,9 +6,9 @@
 Name:       harbour-simplecrop
 
 # >> macros
-# << macros
 %define __provides_exclude_from ^%{_datadir}/%{name}/lib/.*\\.so\\>
 %define __requires_exclude_from ^%{_datadir}/%{name}/lib/.*\\.so\\>
+# << macros
 
 Summary:    Imageworks image editor
 Version:    1.0
