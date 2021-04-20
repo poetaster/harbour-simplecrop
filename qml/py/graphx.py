@@ -43,9 +43,6 @@ from PIL.ExifTags import TAGS
 from PIL import ExifTags
 from io import BytesIO
 
-
-
-
 def argb2rgba ( paintColor ) :
     first2 = paintColor[1:3]
     last6 = paintColor[3:9]
@@ -84,10 +81,6 @@ def createPreviewBaseImage ( inputPathPy, previewBaseImagePath, previewBaseImage
     img.close()
     output_img.close()
 
-
-
-
-
 def cropNowFunction ( inputPathPy, outputPathPy, rectX, rectY, rectWidth, rectHeight, scaleFactor, undoNr ):
     img = Image.open(inputPathPy)
     img = ImageOps.exif_transpose(img)
@@ -102,7 +95,6 @@ def cropNowFunction ( inputPathPy, outputPathPy, rectX, rectY, rectWidth, rectHe
     img.close()
     output_img.close()
 
-
 def cropCoordinatesFunction ( inputPathPy, outputPathPy, rectX, rectY, rectWidth, rectHeight, undoNr ):
     img = Image.open(inputPathPy)
     img = ImageOps.exif_transpose(img)
@@ -116,7 +108,6 @@ def cropCoordinatesFunction ( inputPathPy, outputPathPy, rectX, rectY, rectWidth
     pyotherside.send('exchangeImage', outputPathPy)
     img.close()
     output_img.close()
-
 
 def cropCanvasPolygonFunction( inputPathPy, outputPathPy, freeDrawPolyCoordinates, scaleFactor, paintColor, actionSelection ):
     img = Image.open(inputPathPy)
@@ -207,8 +198,6 @@ def perspectiveCorrectionFunction ( inputPathPy, outputPathPy, coeffs, scaleFact
 
 
 
-
-
 def rotateLeftFunction ( inputPathPy, outputPathPy ):
     img = Image.open(inputPathPy)
     img = ImageOps.exif_transpose(img)
@@ -218,7 +207,6 @@ def rotateLeftFunction ( inputPathPy, outputPathPy ):
     img.close()
     output_img.close()
 
-
 def mirrorHorizontalFunction ( inputPathPy, outputPathPy ):
     img = Image.open(inputPathPy)
     img = ImageOps.exif_transpose(img)
@@ -227,7 +215,6 @@ def mirrorHorizontalFunction ( inputPathPy, outputPathPy ):
     pyotherside.send('exchangeImage', outputPathPy)
     img.close()
     output_img.close()
-
 
 def mirrorVerticalFunction ( inputPathPy, outputPathPy  ):
     img = Image.open(inputPathPy)
@@ -3079,10 +3066,6 @@ def createCollageScattered ( outputPathPy, inputPathPy, targetWidth, selectedPat
     firstImgHeightRow.clear()
     currentImgHeightRow.clear()
     lastImgHeightLine.clear()
-
-
-
-
 
 
 

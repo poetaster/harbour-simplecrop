@@ -25,8 +25,8 @@ Page {
     property string origImageFilePath : ""
     property string origImageFileName
     property string origImageFolderPath
-    property string tempImageFolderPath //: "/home" + "/defaultuser" + "/.imageworks_tmp/"
-    property string saveImageFolderPath //: "/home" + "/defaultuser" + "/Pictures" + "/Imageworks/"
+    property string tempImageFolderPath
+    property string saveImageFolderPath
     property string symbolSourceFolder: "/usr" + "/share" + "/harbour-simplecrop" + "/qml" + "/symbols/"
     property string filterSourceFolder: "/usr" + "/share" + "/harbour-simplecrop" + "/qml" + "/filters/"
     property string fontSourceFolder: "/usr" + "/share" + "/harbour-simplecrop" + "/qml" + "/fonts/"
@@ -262,11 +262,11 @@ Page {
 
             // Handlers = Signals to do something in QML whith received Infos from pyotherside
             setHandler('homePathFolder', function( homeDir ) {
-                tempImageFolderPath = homeDir + "/.imageworks_tmp/"
+                tempImageFolderPath = homeDir + "/.cache/harbour-simplecrop/"
                 saveImageFolderPath = homeDir + "/Pictures" + "/Imageworks/"
                 homeDirectory = homeDir
-                py.createTmpAndSaveFolder()
-                py.deleteAllTMPFunction()
+                py.createTmpAndSaveFolder(tempImageFolderPath, saveImageFolderPath)
+                py.deleteAllTMPFunction(tempImageFolderPath)
                 py.deleteCopyPasteImage()
             });
             setHandler('exchangeImage', function(new_imagePath) {

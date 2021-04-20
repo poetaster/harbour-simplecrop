@@ -75,11 +75,11 @@ equals(QT_ARCH, arm): {
   DISTFILES += lib/arm32/PIL/* \
   message("!!!architecture armv7hl detected!!!");
 }
-#equals(QT_ARCH, arm64): {
-#  python.files = lib/arm32/*
-#  DISTFILES += lib/arm32/PIL/* \
-#  message("!!!architecture armv7hl detected!!!");
-#}
+equals(QT_ARCH, arm64): {
+  python.files = lib/arm64/*
+  DISTFILES += lib/arm64/PIL/* \
+  message("!!!architecture aa64 detected!!!");
+}
 
 python.path = "/usr/share/harbour-simplecrop/lib"
 INSTALLS += python

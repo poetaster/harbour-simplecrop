@@ -54,14 +54,14 @@ rm -rf %{buildroot}
 %qmake5_install
 
 # >> install post
-install -t %{buildroot}/%{_datadir}/%{name}/lib/ \
-    /usr/lib/libjpeg.so.62 \
-    /usr/lib/libopenjp2.so.7 \
-    /usr/lib/libtiff.so.5 \
-    /usr/lib/libfreetype.so.6 \
-    /usr/lib/libwebpdemux.so.2 \
-    /usr/lib/libwebpmux.so.3 \
-    /usr/lib/libwebp.so.7
+install -D -t %{buildroot}/%{_datadir}/%{name}/lib/ \
+    %{_libdir}/libjpeg.so.62 \
+    %{_libdir}/libopenjp2.so.7 \
+    %{_libdir}/libtiff.so.5 \
+    %{_libdir}/libfreetype.so.6 \
+    %{_libdir}/libwebpdemux.so.2 \
+    %{_libdir}/libwebpmux.so.3 \
+    %{_libdir}/libwebp.so.7
 # << install post
 
 desktop-file-install --delete-original       \
