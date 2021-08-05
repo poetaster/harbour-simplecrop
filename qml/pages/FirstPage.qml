@@ -20,7 +20,7 @@ Page {
     }
     */
 
-    // file cariables
+    // file variables
     property string homeDirectory
     property string origImageFilePath : ""
     property string origImageFileName
@@ -171,9 +171,10 @@ Page {
 
     // autostart functions
     Component.onCompleted: {
-        py.getHomePath() // also deletes TMPs on path returned to qml, see handler "homePathFolder"
-        hexToRGBA(paintToolColor)
-        openWithPath()
+        py.getHomePath(); // also deletes TMPs on path returned to qml, see handler "homePathFolder"
+        hexToRGBA(paintToolColor);
+        openWithPath();
+
     }
 
 
@@ -193,6 +194,14 @@ Page {
         repeat: false
         onTriggered: pageStack.push(fontPickerPage)
     }
+    Timer {
+        id: openDelayTimer
+        interval: 10
+        running: false
+        repeat: false
+        onTriggered: pageStack.push(imagePickerPage)
+    }
+
     Component {
        id: filePickerPage
        FilePickerPage {
@@ -369,8 +378,26 @@ Page {
                     py.createCollageScattered( targetWidth, selectedPaths, shuffle, targetBackColor, targetColumns, targetSpacing, targetBlur, randomAngleList, ratioWanted, targetFrameSetup )
                 }
             });
+
             setHandler('startFiltersEffectsFunctionFromPy', function( effectName, coalValue, blurValue, centerFocusValue, miniatureBlurValue, miniatureColorValue, addFrameValue, brushSize, quantizeColors, targetColor2Alpha, alphaTolerance, opacityValue, colorExtractARGB, channelExtractARGB, unsharpRadiusMask, unsharpPercentMask, unsharpThresholdMask, brightspotSize ) {
                 finishedLoading = false
+
+                /*switch(effectName){
+                case "gotham":
+                    py.gothamFilterFunction() ;
+                    break;
+                case "crema":
+                    py.cremaFilterFunction() ;
+                    break;
+                case "juno" :
+                    py.junoFilterFunction()
+                    break;
+                case "kelvin":
+                    py.kelvinFilterFunction()
+                    break;
+
+                }*/
+
                 if (effectName === "gotham") {
                     py.gothamFilterFunction()
                 }
@@ -1410,6 +1437,8 @@ Page {
             id: column
             width: page.width
             spacing: Theme.paddingLarge
+            // POETASTER
+            Component.onCompleted: openDelayTimer.start();
 
             SectionHeader {
                 id: idSectionHeader
@@ -5473,8 +5502,10 @@ Page {
                 height: Theme.itemSizeMedium
                 color: "transparent"
             }
+            //Component.onCompleted: pageStack.push(imagePickerPage)
 
         } // end Column
+
     } // end SilicaFlickable
 
 

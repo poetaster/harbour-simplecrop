@@ -2,6 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <source>About Imageworks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An Image Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copyright © 2020 Tobias Planitzer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> © 2021 Mark Washeim</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imageworks is open source software licensed under the terms of </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the GNU General Public License v3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ChannelBench</name>
     <message>
         <source>Channel bench</source>
@@ -1147,10 +1174,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>share</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>width, preserve ratio</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1178,59 +1201,19 @@
 <context>
     <name>InfoPage</name>
     <message>
-        <source>Imageworks</source>
+        <source>About Imageworks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Make sure you have only ONE of them installed!</source>
+        <source>Copyright © 2020 Tobias Planitzer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>1) Download the latest file suitable for your device:</source>
+        <source> © 2021 Mark Washeim</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>     Smartphones usually ...armv7hl.rpm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>     Tablets possibly ...i486.rpm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2) Allow &apos;3rd party software&apos; in Sailfish settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>3) Install python3-pillow manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>tobias.planitzer@protonmail.com</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Photo editor for SailfishOS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Active development of Imageworks has been completed. However, if you would like to send some greetings, report a bug or even sponsor further development, please contact me here:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>INSTALL</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HOW TO</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CONTACT</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This app requires SailfishOS 3.3+ and python3-pillow library in version 7+ which is available on Openrepos.net.</source>
+        <source>Feedback: https://github.com/poetaster/harbour-simplecrop:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1486,25 +1469,6 @@
     </message>
     <message>
         <source>Filetype does not support transparency.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SharePage</name>
-    <message>
-        <source>Share image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>sending file to</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>You are about to send a large temporary PNG file.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save as JPG first, if you need smaller filesize.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
