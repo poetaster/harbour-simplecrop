@@ -25,13 +25,11 @@ BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
-BuildRequires:  pkgconfig(libjpeg)
-BuildRequires:  pkgconfig(libopenjp2)
-BuildRequires:  pkgconfig(libtiff-4)
-BuildRequires:  pkgconfig(freetype2)
-BuildRequires:  pkgconfig(libwebp)
-BuildRequires:  pkgconfig(libwebpdemux)
-BuildRequires:  pkgconfig(libwebpmux)
+BuildRequires:  pkgconfig(libjpeg-turbo-devel)
+BuildRequires:  pkgconfig(openjpeg-devel)
+BuildRequires:  pkgconfig(libtiff-devel)
+BuildRequires:  pkgconfig freetype-devel()
+BuildRequires:  pkgconfig(libwebp-devel)
 
 %description
 Image editing application for Sailfish OS.
