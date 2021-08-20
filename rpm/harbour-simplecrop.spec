@@ -19,18 +19,19 @@ URL:        https://github.com/poetaster/harbour-simplecrop
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   pyotherside-qml-plugin-python3-qt5
+
+%if "%{sailfish_version}" < "40000" 
+Requires:   python-imaging
+%else
+Requires:   python3-imaging
+%endif
+
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
-BuildRequires:  pkgconfig(libjpeg)
-BuildRequires:  pkgconfig(libopenjp2)
-BuildRequires:  pkgconfig(libtiff-4)
-BuildRequires:  pkgconfig(freetype2)
-BuildRequires:  pkgconfig(libwebp)
-BuildRequires:  pkgconfig(libwebpdemux)
-BuildRequires:  pkgconfig(libwebpmux)
+
 
 %description
 Image editing application for Sailfish OS.
@@ -60,14 +61,6 @@ rm -rf %{buildroot}
 %qmake5_install
 
 # >> install post
-install -D -t %{buildroot}/%{_datadir}/%{name}/lib/ \
-    %{_libdir}/libjpeg.so.62 \
-    %{_libdir}/libopenjp2.so.7 \
-    %{_libdir}/libtiff.so.5 \
-    %{_libdir}/libfreetype.so.6 \
-    %{_libdir}/libwebpdemux.so.2 \
-    %{_libdir}/libwebpmux.so.3 \
-    %{_libdir}/libwebp.so.7
 # << install post
 
 desktop-file-install --delete-original       \
@@ -81,5 +74,6 @@ desktop-file-install --delete-original       \
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %attr(644,root,root) %{_datadir}/%{name}/qml/py/graphx.py
+
 # >> files
 # << files
