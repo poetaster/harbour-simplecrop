@@ -65,21 +65,21 @@ HEADERS +=
 # INSTALLS += pil_static
 
 # include a static library
-equals(QT_ARCH, i386): {
-  python.files = lib/x86_32/*
-  DISTFILES += lib/PIL/x86_32/PIL/* \
-  message("!!!architecture x86 / 32bit detected!!!");
-}
-equals(QT_ARCH, arm): {
-  python.files = lib/arm32/*
-  DISTFILES += lib/arm32/PIL/* \
-  message("!!!architecture armv7hl detected!!!");
-}
-equals(QT_ARCH, arm64): {
-  python.files = lib/arm64/*
-  DISTFILES += lib/arm64/PIL/* \
-  message("!!!architecture aa64 detected!!!");
-}
+#equals(QT_ARCH, i386): {
+#  python.files = lib/x86_32/*
+#  DISTFILES += lib/PIL/x86_32/PIL/* \
+#  message("!!!architecture x86 / 32bit detected!!!");
+#}
+#equals(QT_ARCH, arm): {
+#  python.files = lib/arm32/*
+#  DISTFILES += lib/arm32/PIL/* \
+#  message("!!!architecture armv7hl detected!!!");
+#}
+#equals(QT_ARCH, arm64): {
+#  python.files = lib/arm64/*
+#  DISTFILES += lib/arm64/PIL/* \
+#  message("!!!architecture aa64 detected!!!");
+#}
 
 python.path = "/usr/share/harbour-simplecrop/lib"
 INSTALLS += python
