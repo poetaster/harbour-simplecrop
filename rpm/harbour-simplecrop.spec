@@ -20,7 +20,7 @@ Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   pyotherside-qml-plugin-python3-qt5
 
-%if "%{sailfish_version}" < "40000" 
+%if "%{sailfishos_version}" < "40000" 
 Requires:   python-imaging
 %else
 Requires:   python3-imaging
