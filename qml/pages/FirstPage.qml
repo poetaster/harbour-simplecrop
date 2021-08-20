@@ -710,6 +710,7 @@ Page {
                     py.addFrameFunction( addFrameValue )
                 }
                 else if (effectName === "fxTintColor") {
+                    tintColor = paintToolColor 
                     py.tintWithColorFunction()
                 }
                 else if (effectName === "fxReduceColors") {
@@ -1006,7 +1007,7 @@ Page {
         function posterizeFunction() {
             var targetImage = "current"
             generatePathAndUndoNr()
-            call("graphx.posterizeFunction", [ targetImage, targetImage, inputPathPy, outputPathPy ])
+            call("graphx.posterizeFunction", [ targetImage, inputPathPy, outputPathPy ])
         }
         function blurFunction( blurValue ) {
             var targetImage = "current"
@@ -1077,7 +1078,7 @@ Page {
         function tintWithColorFunction() {
             var targetImage = "current"
             generatePathAndUndoNr()
-            tintColor = paintToolColor
+            //tintColor = paintToolColor
             var factorBrightnessTint = 1.2
             call("graphx.tintWithColorFunction", [ targetImage, inputPathPy, outputPathPy, tintColor, factorBrightnessTint ])
         }
@@ -3845,10 +3846,10 @@ Page {
                         pageStack.push(Qt.resolvedUrl("MetadataPage.qml"), {
                                            origImageFileName : origImageFileName,
                                            origImageFolderPath : origImageFolderPath,
-                                           tempImageFolderPath : tempImageFolderPath,
-                                           imageWidthSave : idImageLoadedFreecrop.sourceSize.width,
-                                           imageHeightSave : idImageLoadedFreecrop.sourceSize.height,
                                            inputPathPy : idImageLoadedFreecrop.source.toString()
+                                           //tempImageFolderPath : tempImageFolderPath,
+                                           //imageWidthSave : idImageLoadedFreecrop.sourceSize.width,
+                                           //imageHeightSave : idImageLoadedFreecrop.sourceSize.height,
                                        } ) }
                     Label {
                         horizontalAlignment: Text.AlignHCenter
