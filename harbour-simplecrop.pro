@@ -81,5 +81,5 @@ HEADERS +=
 #  message("!!!architecture aa64 detected!!!");
 #}
 
-python.path = "/usr/share/harbour-simplecrop/lib"
-INSTALLS += python
+#python.path = "/usr/share/harbour-simplecrop/lib"
+#INSTALLS += python
