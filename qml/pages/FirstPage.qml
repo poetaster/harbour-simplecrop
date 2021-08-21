@@ -3890,6 +3890,28 @@ Page {
                     }
                 }
                 IconButton {
+                    enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true && templock === -1 ) ? true : false
+                    width: parent.width / itemsPerRow
+                    height: Theme.itemSizeSmall
+                    icon.source: "image://theme/icon-m-share?"
+                    onClicked: {
+                        pageStack.push(Qt.resolvedUrl("SharePage.qml"), {
+                            shareFilePath : idImageLoadedFreecrop.source.toString(),
+                            shareFileName : origImageFileName,
+                        })
+                    }
+                    Label {
+                        horizontalAlignment: Text.AlignHCenter
+                        text: qsTr("share")
+                        font.pixelSize: Theme.fontSizeExtraSmall
+                        anchors {
+                            top: parent.bottom
+                            topMargin: -Theme.paddingSmall
+                            horizontalCenter: parent.horizontalCenter
+                        }
+                    }
+                }
+                IconButton {
                     enabled: ( finishedLoading === true) ? true : false
                     width: parent.width / itemsPerRow
                     height: Theme.itemSizeSmall
