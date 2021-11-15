@@ -61,19 +61,19 @@ rm -rf %{buildroot}
 # << install pre
 %qmake5_install
 
-mkdir -p %{buildroot}%{_datadir}/%{name}/lib
-cp -ax %{_libdir}/python3.8/site-packages/PIL %{buildroot}%{_datadir}/%{name}/lib/PIL
+#mkdir -p %{buildroot}%{_datadir}/%{name}/lib
+#cp -ax %{_libdir}/python3.8/site-packages/PIL %{buildroot}%{_datadir}/%{name}/lib/PIL
 
 # >> install post
-install -D -t %{buildroot}/%{_datadir}/%{name}/lib/ \
-    %{_libdir}/libjpeg.so.62 \
-    %{_libdir}/libopenjp2.so.7 \
-    %{_libdir}/libtiff.so.5 \
-    %{_libdir}/libfreetype.so.6 \
-    %{_libdir}/libwebpdemux.so.2 \
-    %{_libdir}/libwebpmux.so.3 \
-    %{_libdir}/libwebp.so.7
-# << install post
+#install -D -t %{buildroot}/%{_datadir}/%{name}/lib/ \
+#    %{_libdir}/libjpeg.so.62 \
+#    %{_libdir}/libopenjp2.so.7 \
+#    %{_libdir}/libtiff.so.5 \
+#    %{_libdir}/libfreetype.so.6 \
+#    %{_libdir}/libwebpdemux.so.2 \
+#    %{_libdir}/libwebpmux.so.3 \
+#    %{_libdir}/libwebp.so.7
+## << install post
 
 desktop-file-install --delete-original       \
   --dir %{buildroot}%{_datadir}/applications             \
