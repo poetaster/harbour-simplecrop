@@ -11,7 +11,7 @@ Name:       harbour-simplecrop
 # << macros
 
 Summary:    Imageworks image editor
-Version:    1.2.0
+Version:    1.2.1
 Release:    1
 Group:      Qt/Qt
 License:    GPLv3
@@ -51,8 +51,8 @@ Screenshots:
  - https://raw.githubusercontent.com/poetaster/harbour-simplecrop/main/screenshot-03.png
  - https://raw.githubusercontent.com/poetaster/harbour-simplecrop/main/screenshot-12.png
 Url:
- - Homepage: https://github.com/poetaster/harbour-simplecrop
- - Donation: https://www.paypal.me/poetasterFOSS
+  Homepage: https://github.com/poetaster/harbour-simplecrop
+  Donation: https://www.paypal.me/poetasterFOSS
 %endif
 
 %prep
