@@ -3889,7 +3889,7 @@ Page {
                         }
                     }
                 }
-                IconButton {
+                /*IconButton {
                     enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true && templock === -1 ) ? true : false
                     width: parent.width / itemsPerRow
                     height: Theme.itemSizeSmall
@@ -3910,7 +3910,7 @@ Page {
                             horizontalCenter: parent.horizontalCenter
                         }
                     }
-                }
+                }*/
                 IconButton {
                     enabled: ( finishedLoading === true) ? true : false
                     width: parent.width / itemsPerRow

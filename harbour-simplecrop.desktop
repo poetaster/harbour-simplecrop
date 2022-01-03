@@ -2,8 +2,14 @@
 Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-simplecrop
-Exec=harbour-simplecrop %u
+Exec=harbour-simplecrop
 Name=Imageworks
+
+[X-Sailjail]
+OrganizationName=de.poetaster
+ApplicationName=harbour-simplecrop
+Permissions=UserDirs;MediaIndexing
+
 # translation example:
 # your app name in German locale (de)
 #
