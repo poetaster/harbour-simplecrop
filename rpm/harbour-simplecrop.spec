@@ -14,6 +14,8 @@ URL:        https://github.com/poetaster/harbour-simplecrop
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   pyotherside-qml-plugin-python3-qt5
+Requires:   python%{python3_version}(pillow) >= 8
+
 #Requires:   python3-imaging
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
@@ -69,6 +71,9 @@ install -D -t %{buildroot}/%{_datadir}/%{name}/lib/ \
     %{_libdir}/libwebp.so.7
 %endif
 # << install post
+
+# strip executable bit from all libraries
+#chmod -x %{buildroot}%{_datadir}/%{name}/lib/*.so*
 
 desktop-file-install --delete-original       \
   --dir %{buildroot}%{_datadir}/applications             \
