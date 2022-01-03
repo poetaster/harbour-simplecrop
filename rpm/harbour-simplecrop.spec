@@ -6,7 +6,7 @@ Name:       harbour-simplecrop
 # << macros
 
 Summary:    Imageworks image editor
-Version:    1.1.3
+Version:    1.2.0
 Release:    1
 Group:      Qt/Qt
 License:    GPLv3
@@ -14,7 +14,7 @@ URL:        https://github.com/poetaster/harbour-simplecrop
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   pyotherside-qml-plugin-python3-qt5
-Requires:   python%{python3_version}(pillow) >= 8
+#Requires:   python%{python3_version}(pillow) >= 8
 
 #Requires:   python3-imaging
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
