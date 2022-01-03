@@ -44,7 +44,6 @@ Categories:
  - Graphics
 DeveloperName: Mark Washeim
 Custom:
- - RepoType: github
  - Repo: https://github.com/poetaster/harbour-simplecrop
 Icon: https://raw.githubusercontent.com/poetaster/harbour-simplecrop/master/icons/172x172/harbour-simplecrop.png
 Screenshots:
@@ -53,8 +52,6 @@ Screenshots:
  - https://raw.githubusercontent.com/poetaster/harbour-simplecrop/main/screenshot-12.png
 Url:
  - Homepage: https://github.com/poetaster/harbour-simplecrop
- - Help: https://github.com/poetaster/harbour-simplecrop/discussions
- - Bugtracker: https://github.com/poetaster/harbour-simplecrop/issues
  - Donation: https://www.paypal.me/poetasterFOSS
 %endif
 
