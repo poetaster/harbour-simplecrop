@@ -54,7 +54,7 @@ Page {
             font.pixelSize: Theme.fontSizeExtraSmall
             color: Theme.secondaryColor
             text: qsTr("Copyright © 2020 Tobias Planitzer") + "\n "
-                  + qsTr(" © 2021 Mark Washeim")
+                  + qsTr(" © 2021-22 Mark Washeim")
         }
 
         Item {
