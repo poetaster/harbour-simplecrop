@@ -9,5 +9,5 @@ Name[de]=Imageworks
 [X-Sailjail]
 OrganizationName=de.poetaster
 ApplicationName=harbour-simplecrop
-Permissions=UserDirs;MediaIndexing
+Permissions=UserDirs;RemovableMedia;MediaIndexing;Camera
 

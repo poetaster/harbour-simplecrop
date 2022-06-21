@@ -2,6 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <source>About Imageworks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An Image Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copyright © 2020 Tobias Planitzer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> © 2021-22 Mark Washeim</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imageworks is open source software licensed under the terms of </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the GNU General Public License v3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ChannelBench</name>
     <message>
         <source>Channel bench</source>
@@ -544,7 +571,7 @@
         <translation>纳什维尔</translation>
     </message>
     <message>
-　　<source>hefe</source>
+        <source>hefe</source>
         <translation>hefe</translation>
     </message>
     <message>
@@ -1147,10 +1174,6 @@
         <translation>Antonio</translation>
     </message>
     <message>
-        <source>share</source>
-        <translation>分享</translation>
-    </message>
-    <message>
         <source>width, preserve ratio</source>
         <translation>宽度，保持比率</translation>
     </message>
@@ -1178,32 +1201,20 @@
 <context>
     <name>InfoPage</name>
     <message>
-        <source>Imageworks</source>
-        <translation>图像工作室</translation>
+        <source>About Imageworks</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Photo editor for SailfishOS</source>
-        <translation>旗鱼系统图片编辑器</translation>
+        <source>Copyright © 2020 Tobias Planitzer</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>INSTALL</source>
-        <translation>安装</translation>
+        <source> © 2021 Mark Washeim</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>CONTACT</source>
-        <translation>联系</translation>
-    </message>
-    <message>
-        <source>Active development of Imageworks takes place at https://github.com/poetaster/harbour-simplecrop:</source>
-        <translation>图像工作室活跃开发位于 https://github.com/poetaster/harbour-simplecrop:</translation>
-    </message>
-    <message>
-        <source>Imageworks was developed by tobias.planitzer@protonmail.com and is maintained by blueprint@poetaster.de</source>
-        <translation>图像工作室由 tobias.planitzer@protonmail.com 开发，由 blueprint@poetaster.de 维护</translation>
-    </message>
-    <message>
-        <source>This app requires SailfishOS 3.3+.</source>
-        <translation>该软件需要旗鱼系统3.3以上版本。</translation>
+        <source>Feedback: https://github.com/poetaster/harbour-simplecrop:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1459,25 +1470,6 @@
     <message>
         <source>Filetype does not support transparency.</source>
         <translation>文件类型不支持透明度。</translation>
-    </message>
-</context>
-<context>
-    <name>SharePage</name>
-    <message>
-        <source>Share image</source>
-        <translation>分享图像</translation>
-    </message>
-    <message>
-        <source>sending file to</source>
-        <translation>发送文件到</translation>
-    </message>
-    <message>
-        <source>You are about to send a large temporary PNG file.</source>
-        <translation>你将要发送一张大的临时PNG文件。</translation>
-    </message>
-    <message>
-        <source>Save as JPG first, if you need smaller filesize.</source>
-        <translation>如果你需要较小的文件大小，请先保存为JPG。</translation>
     </message>
 </context>
 </TS>

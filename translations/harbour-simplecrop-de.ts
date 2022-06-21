@@ -5,26 +5,26 @@
     <name>AboutPage</name>
     <message>
         <source>About Imageworks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Über Imageworks</translation>
     </message>
     <message>
         <source>An Image Editor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ein Bildbearbeiter</translation>
     </message>
     <message>
         <source>Copyright © 2020 Tobias Planitzer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> © 2021 Mark Washeim</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Imageworks is open source software licensed under the terms of </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Imageworks besteht aus offene Quellen, lizensiert:</translation>
     </message>
     <message>
         <source>the GNU General Public License v3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> © 2021-22 Mark Washeim</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -32,154 +32,154 @@
     <name>ChannelBench</name>
     <message>
         <source>Channel bench</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kanal Werkbank</translation>
     </message>
     <message>
         <source>Alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alpha</translation>
     </message>
     <message>
         <source>Red</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rot</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grün</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blau</translation>
     </message>
     <message>
         <source>keep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">behalten</translation>
     </message>
     <message>
         <source>replace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ersetzen</translation>
     </message>
     <message>
         <source>with</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">mit</translation>
     </message>
     <message>
         <source>original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Original</translation>
     </message>
     <message>
         <source>Gray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grau</translation>
     </message>
     <message>
         <source>Select alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alpha auswählen</translation>
     </message>
     <message>
         <source>Select red</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rot auswählen</translation>
     </message>
     <message>
         <source>Select green</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grün auswählen</translation>
     </message>
     <message>
         <source>Select blue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blau auswählen</translation>
     </message>
     <message>
         <source>red</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">rot</translation>
     </message>
     <message>
         <source>green</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">grün</translation>
     </message>
     <message>
         <source>blue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">blau</translation>
     </message>
     <message>
         <source>load</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">laden</translation>
     </message>
     <message>
         <source>use</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">benutzen</translation>
     </message>
     <message>
         <source>alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">alpha</translation>
     </message>
     <message>
         <source>normal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">normal</translation>
     </message>
     <message>
         <source>invert</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">invertieren</translation>
     </message>
     <message>
         <source>replace, invert and saturate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ersetze, invertiere, sätttigen</translation>
     </message>
 </context>
 <context>
     <name>CollageBench</name>
     <message>
         <source>Collage bench</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Collage Werkbank</translation>
     </message>
     <message>
         <source>mosaic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mosaic</translation>
     </message>
     <message>
         <source>columns</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spalten</translation>
     </message>
     <message>
         <source>spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Abstände</translation>
     </message>
     <message>
         <source>transparent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">transparent</translation>
     </message>
     <message>
         <source>black</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">schwarz</translation>
     </message>
     <message>
         <source>white</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">weiss</translation>
     </message>
     <message>
         <source>background:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">hintergrund:</translation>
     </message>
     <message>
         <source>combine</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">kombiniere</translation>
     </message>
     <message>
         <source>images</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">bilder</translation>
     </message>
     <message>
         <source>blurry image</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">verschwommenes Bild</translation>
     </message>
     <message>
         <source>width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Breite</translation>
     </message>
     <message>
         <source>height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höhe</translation>
     </message>
     <message>
         <source>photowall</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fotowand</translation>
     </message>
     <message>
         <source>2 : 3</source>
@@ -199,7 +199,7 @@
     </message>
     <message>
         <source>frame width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rahmenbreite</translation>
     </message>
     <message>
         <source>output limited to </source>
@@ -215,7 +215,7 @@
     </message>
     <message>
         <source>current color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">aktuelle Farbe</translation>
     </message>
     <message>
         <source>layout generator:</source>
@@ -227,22 +227,22 @@
     </message>
     <message>
         <source>auto-columns</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto-spalte</translation>
     </message>
     <message>
         <source>auto-rows</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto-reihe</translation>
     </message>
     <message>
         <source>scattered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">verstreut</translation>
     </message>
 </context>
 <context>
     <name>ColorcurveBench</name>
     <message>
         <source>Color bench</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Farben Werkbank</translation>
     </message>
     <message>
         <source>histogram, adjust curves</source>
@@ -250,31 +250,31 @@
     </message>
     <message>
         <source>Alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alpha</translation>
     </message>
     <message>
         <source>Red</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rot</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grün</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blau</translation>
     </message>
     <message>
         <source>RGB</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">RGB</translation>
     </message>
     <message>
         <source>input  values</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">eingabe Werte</translation>
     </message>
     <message>
         <source>output  curve</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ausgangs Kurve</translation>
     </message>
     <message>
         <source>occurances</source>
@@ -365,7 +365,7 @@
     </message>
     <message>
         <source>original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Original</translation>
     </message>
     <message>
         <source>coal</source>
@@ -409,15 +409,15 @@
     </message>
     <message>
         <source>red</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">rot</translation>
     </message>
     <message>
         <source>green</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">grün</translation>
     </message>
     <message>
         <source>blue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">blau</translation>
     </message>
     <message>
         <source>add current colored frame</source>
@@ -441,7 +441,7 @@
     </message>
     <message>
         <source>alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">alpha</translation>
     </message>
     <message>
         <source>create alpha from</source>
@@ -449,11 +449,11 @@
     </message>
     <message>
         <source>white</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">weiss</translation>
     </message>
     <message>
         <source>black</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">schwarz</translation>
     </message>
     <message>
         <source>digital unsharp masking</source>
@@ -508,7 +508,7 @@
     </message>
     <message>
         <source>original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Original</translation>
     </message>
     <message>
         <source>warmer</source>
@@ -684,7 +684,7 @@
     </message>
     <message>
         <source>load</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">laden</translation>
     </message>
     <message>
         <source>Filter bench</source>
@@ -787,7 +787,7 @@
     </message>
     <message>
         <source>original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Original</translation>
     </message>
     <message>
         <source>manual</source>
@@ -903,7 +903,7 @@
     </message>
     <message>
         <source>red</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">rot</translation>
     </message>
     <message>
         <source>yellow</source>
@@ -911,11 +911,11 @@
     </message>
     <message>
         <source>green</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">grün</translation>
     </message>
     <message>
         <source>blue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">blau</translation>
     </message>
     <message>
         <source>violet</source>
@@ -999,7 +999,7 @@
     </message>
     <message>
         <source>keep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">behalten</translation>
     </message>
     <message>
         <source>remove</source>
@@ -1107,7 +1107,7 @@
     </message>
     <message>
         <source>transparent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">transparent</translation>
     </message>
     <message>
         <source>clipboard color</source>
@@ -1115,11 +1115,11 @@
     </message>
     <message>
         <source>black</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">schwarz</translation>
     </message>
     <message>
         <source>white</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">weiss</translation>
     </message>
     <message>
         <source>cursor</source>
@@ -1202,7 +1202,7 @@
     <name>InfoPage</name>
     <message>
         <source>About Imageworks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Über Imageworks</translation>
     </message>
     <message>
         <source>Copyright © 2020 Tobias Planitzer</source>
@@ -1276,11 +1276,11 @@
     </message>
     <message>
         <source>width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Breite</translation>
     </message>
     <message>
         <source>height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höhe</translation>
     </message>
     <message>
         <source>clipboard</source>
@@ -1343,19 +1343,19 @@
     <name>PixelBench</name>
     <message>
         <source>Alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alpha</translation>
     </message>
     <message>
         <source>Red</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rot</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grün</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blau</translation>
     </message>
     <message>
         <source>old</source>
@@ -1367,15 +1367,15 @@
     </message>
     <message>
         <source>replace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ersetzen</translation>
     </message>
     <message>
         <source>with</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">mit</translation>
     </message>
     <message>
         <source>keep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">behalten</translation>
     </message>
     <message>
         <source>values</source>
@@ -1387,11 +1387,11 @@
     </message>
     <message>
         <source>normal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">normal</translation>
     </message>
     <message>
         <source>invert</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">invertieren</translation>
     </message>
     <message>
         <source>Results</source>

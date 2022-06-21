@@ -16,7 +16,6 @@ CONFIG += sailfishapp
 
 SOURCES += src/harbour-simplecrop.cpp \
 
-
 DISTFILES += qml/harbour-simplecrop.qml \
     qml/cover/CoverPage.qml \
     qml/pages/AboutPage.qml \
@@ -50,8 +49,9 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/harbour-simplecrop-de.ts
-
+TRANSLATIONS += translations/harbour-simplecrop-de.ts \
+                translations/harbour-simplecrop-zh_CN.ts \
+                translations/harbour-simplecrop-pl.ts
 HEADERS +=
 
 # include library according to architecture (arm, i486_32bit, arm64)

@@ -16,15 +16,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> © 2021 Mark Washeim</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Imageworks is open source software licensed under the terms of </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>the GNU General Public License v3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> © 2021-22 Mark Washeim</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
