@@ -6,7 +6,7 @@
  <service name="tar_git">
   <param name="url">https://github.com/poetaster/harbour-simplecrop.git</param>
   <param name="branch">main</param>
-  <param name="revision"/>
+  <param name="revision">1.2.2</param>
   <param name="token"/>
   <param name="debian">N</param>
   <param name="dumb">N</param>
