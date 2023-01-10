@@ -1,7 +1,7 @@
 <services>
    <service name="webhook">
      <param name="repourl">https://github.com/poetaster/harbour-simplecrop.git</param>
-     <param name="branch">master</param>
+     <param name="branch">main</param>
    </service>
  <service name="tar_git">
   <param name="url">https://github.com/poetaster/harbour-simplecrop.git</param>
