@@ -4,6 +4,8 @@ Sailfish OS Imageworks is the most complete photo editor and image manipulation 
 
 It provides a large number of functions, effects and editing possibilities.
 
+It uses python-imaging, aka PIL, for many operations on images.
+
 ## Contribute
 
 Please file your bug reports here and not in the Jolla or openrepos comments!
