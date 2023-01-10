@@ -14,6 +14,6 @@ Please file your bug reports here and not in the Jolla or openrepos comments!
 
 Tobias wrote Imageworks and poetaster is developing and maintaining in future.
  
-2021 - 2022 Mark Washeim <blueprint@poetaster.de>
+2021 - 2023 Mark Washeim <blueprint@poetaster.de>
 
 
