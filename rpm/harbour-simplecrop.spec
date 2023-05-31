@@ -29,6 +29,7 @@ Requires:   python3-imaging
 #Requires:   python3-imaging
 #%endif
 
+BuildRequires:  qt5-qttools-linguist
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
