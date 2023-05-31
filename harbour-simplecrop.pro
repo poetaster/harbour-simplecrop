@@ -31,6 +31,9 @@ DISTFILES += qml/harbour-simplecrop.qml \
     qml/pages/SavePage.qml \
     qml/pages/ViewPage.qml \
     qml/pages/perspectivetransformhelper.js \
+    qml/symbols/* \
+    qml/fonts/* \
+    qml/filters/* \
     rpm/harbour-simplecrop.changes.in \
     rpm/harbour-simplecrop.changes.run.in \
     rpm/harbour-simplecrop.spec \

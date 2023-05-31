@@ -1,0 +1,45 @@
+* Tue Jun 21 10:58:02 2022 +0200 Mark Washeim <blueprint@poetaster.de> 1.2.2
+- Added requires for qml only build.
+- Removed lib include which is no longer required.
+- Minor updates due to copyright update.
+- Updates to perms. Qml runner
+- Add translations Move to noarch qml only.
+- Update copyright
+- Removed faulty doubles.
+- Working on german and fix other translations.
+- switch to noarch bumped version
+- Add removeable dirs permissions.
+- Added polish translation back.
+
+* Mon Jan 3 21:08:45 2022 +0100 Mark Washeim <blueprint@poetaster.de> 1.2.1
+- Minor metadata and version bump.
+
+* Mon Jan 3 16:02:03 2022 +0100 Mark Washeim <blueprint@poetaster.de> 1.2.0
+- Corrected release Removed redundant urls.
+- removed share (updating to harbour allowed). added chum meta data added sailjail perms.
+
+* Mon Nov 15 15:00:23 2021 +0100 Mark Washeim <blueprint@poetaster.de> 1.1.4
+- Fixes from tobias: https://github.com/poetaster/harbour-simplecrop/issues/8 https://github.com/poetaster/harbour-simplecrop/issues/7 https://github.com/poetaster/harbour-simplecrop/issues/6
+
+* Fri Aug 20 16:15:27 2021 +0200 GitHub <blueprint@poetaster.de> 1.1.3
+- Update harbour-simplecrop.spec
+
+* Fri Aug 20 12:56:57 2021 +0200 Mark Washeim <blueprint@poetaster.de> 1.1.2
+- Removed python lib line
+- Removed libs, moving to internal deps.
+- Update harbour-simplecrop.pro
+
+* Mon Aug 9 16:18:29 2021 +0200 Mark Washeim <blueprint@poetaster.de> 1.1-1
+- Removed unused files
+- Removed pycache files from repo.
+- Another trivial attempt for obs.
+- Another attempt at build requieres for obs.
+- Testing a spec file variant for obs.
+- Modified spec/pro to build on obs.
+- Added the 64 bit libs.
+- Corrected the temp file path creation. now resides in .cache/harbour-simplecrop
+- new about page and small correction to spec.
+- Scaled the screenshots for jolla.
+
+* Tue Jun 21 10:58:02 2022 +0200 Mark Washeim <blueprint@poetaster.de> v1.0-2
+- Initial

@@ -2444,7 +2444,7 @@ Page {
                 visible: (buttonCrop.down === true) ? true : false
                 x: Theme.paddingLarge
                 width: parent.width - 2* Theme.paddingLarge
-                columns: 3
+                columns: 4
                 IconButton {
                     id: idCropTransformPicker
                     enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
@@ -2493,7 +2493,7 @@ Page {
                     id: idComboBoxCrop
                     enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
                     visible: ( pickerTransformOrCropIndex === 0 ) ? true: false
-                    width: parent.width / itemsPerRow * (itemsPerRow-2)
+                    width: parent.width / itemsPerRow * (itemsPerRow-3)
                     menu: ContextMenu {
                         MenuItem {
                             text: qsTr("free crop")
@@ -2635,6 +2635,21 @@ Page {
                     }
                 }
                 IconButton {
+                    id: invertRatioButton
+                    enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
+                    visible: ( pickerTransformOrCropIndex === 0 ) ? true: false
+                    width: parent.width / itemsPerRow
+                    height: Theme.itemSizeSmall
+                    icon.source: "image://theme/icon-m-rotate-left?"
+                    onClicked: {
+                        croppingRatio = 1 / croppingRatio
+                        setCropmarkersRatio()
+
+                    }
+                }
+                // crop button
+                IconButton {
+                    id: cropButton
                     enabled: ( (idCropInputRatioWidth.text !== "" && idCropInputRatioHeight.text !== "" && idInputManualX1.text !== "" && idInputManualX2.text !== "" && idInputManualY1.text !== "" && idInputManualY2.text !== "" ) && ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true )) ? true : false
                     width: parent.width / itemsPerRow
                     height: Theme.itemSizeSmall
@@ -2664,6 +2679,7 @@ Page {
                         }
                     }
                 }
+
 
                 Item {
                     visible: ( ((idComboBoxCrop.currentIndex === 2) || (idComboBoxCrop.currentIndex === 12) ) && pickerTransformOrCropIndex === 0 ) ? true : false
