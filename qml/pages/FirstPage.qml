@@ -2439,260 +2439,301 @@ Page {
             }
 
 
-            Grid {
+            Column {
                 id: idGridCropPerspectivePicker
                 visible: (buttonCrop.down === true) ? true : false
                 x: Theme.paddingLarge
                 width: parent.width - 2* Theme.paddingLarge
-                columns: 4
-                IconButton {
-                    id: idCropTransformPicker
-                    enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
-                    width: parent.width / itemsPerRow
-                    height: Theme.itemSizeSmall
-                    icon.source : "../symbols/icon-m-cut.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    onClicked: {
-                        handleWidth = 2* Theme.paddingLarge
-                        handleHeight = 2* Theme.paddingLarge
-                        idComboBoxCrop.currentIndex = 0
-                        if (pickerTransformOrCropIndex === 1) {
-                            icon.source = "../symbols/icon-m-cut.svg"
-                            croppingRatio = 0
-                            stretchOversizeActive === true
-                            stretchOversizeActive === false
-                            setCropmarkersFullImage()
-                            pickerTransformOrCropIndex = 0
-                        }
-                        else {
-                            icon.source = "../symbols/icon-m-transform.svg"
-                            croppingRatio = 0
-                            setCropmarkersFullImage()
-                            pickerTransformOrCropIndex = 1
-                        }
-                    }
-                }
-                ComboBox {
-                    id: idComboBoxFoldStretch
-                    enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
-                    visible: ( pickerTransformOrCropIndex !== 0 ) ? true: false
-                    width: parent.width / itemsPerRow * (itemsPerRow-2)
-                    menu: ContextMenu {
-                        MenuItem {
-                            text: qsTr("stretch to edges")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                        }
-                        MenuItem {
-                            text: qsTr("fold from edges")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                        }
-                    }
-                }
-                ComboBox {
-                    id: idComboBoxCrop
-                    enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
-                    visible: ( pickerTransformOrCropIndex === 0 ) ? true: false
-                    width: parent.width / itemsPerRow * (itemsPerRow-3)
-                    menu: ContextMenu {
-                        MenuItem {
-                            text: qsTr("free crop")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
+                Row {
+                    id: cropButtonRow
+                    width: parent.width
+                    IconButton {
+                        id: idCropTransformPicker
+                        enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
+                        width: parent.width / 8
+                        height: Theme.itemSizeSmall
+                        icon.source : "../symbols/icon-m-cut.svg"
+                        icon.width: Theme.iconSizeMedium
+                        icon.height: Theme.iconSizeMedium
+                        onClicked: {
+                            handleWidth = 2* Theme.paddingLarge
+                            handleHeight = 2* Theme.paddingLarge
+                            idComboBoxCrop.currentIndex = 0
+                            if (pickerTransformOrCropIndex === 1) {
+                                icon.source = "../symbols/icon-m-cut.svg"
                                 croppingRatio = 0
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
+                                stretchOversizeActive === true
+                                stretchOversizeActive === false
                                 setCropmarkersFullImage()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("original")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                // original ration of cropping zone, takes handles into account
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                croppingRatio = (idItemCropzoneHandles.width - handleWidth) / (idItemCropzoneHandles.height - handleHeight)
-                                setCropmarkersFullImage()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("manual")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 1
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                idCropInputRatioHeight.text = placeholderManualCrop
-                                idCropInputRatioWidth.text = placeholderManualCrop
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("DIN-landscape")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 1754/1240
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("DIN-portrait")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 1240/1754
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("4:3")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 4/3
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("16:10")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 16/10
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("16:9")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 16/9
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("21:9")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 21/9
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("1:1")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 1
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("3:4")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 3/4
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("1:2")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 1/2
-                                handleWidth = 2 * Theme.paddingLarge
-                                handleHeight = 2 * Theme.paddingLarge
-                                setCropmarkersRatio()
-                            }
-                        }
-                        MenuItem {
-                            text: qsTr("pixels")
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            onClicked: {
-                                croppingRatio = 0
-                                handleWidth = 1
-                                handleHeight = 1
-                                setCropmarkersFullImage()
-                                idInputManualX1.text = 0
-                                idInputManualY1.text = 0
-                                idInputManualX2.text = idImageLoadedFreecrop.sourceSize.width
-                                idInputManualY2.text = idImageLoadedFreecrop.sourceSize.height
-                            }
-                        }
-                    }
-                }
-                IconButton {
-                    id: invertRatioButton
-                    enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
-                    visible: ( pickerTransformOrCropIndex === 0 ) ? true: false
-                    width: parent.width / itemsPerRow
-                    height: Theme.itemSizeSmall
-                    icon.source: "image://theme/icon-m-rotate-left?"
-                    onClicked: {
-                        croppingRatio = 1 / croppingRatio
-                        setCropmarkersRatio()
-
-                    }
-                }
-                // crop button
-                IconButton {
-                    id: cropButton
-                    enabled: ( (idCropInputRatioWidth.text !== "" && idCropInputRatioHeight.text !== "" && idInputManualX1.text !== "" && idInputManualX2.text !== "" && idInputManualY1.text !== "" && idInputManualY2.text !== "" ) && ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true )) ? true : false
-                    width: parent.width / itemsPerRow
-                    height: Theme.itemSizeSmall
-                    icon.source: "../symbols/icon-m-apply.svg"
-                    icon.width: Theme.iconSizeMedium
-                    icon.height: Theme.iconSizeMedium
-                    onClicked: {
-                        if ( pickerTransformOrCropIndex === 0  ) {
-                            finishedLoading = false
-                            if ( idComboBoxCrop.currentIndex !== 12) {
-                                py.croppingFunctionHandles()
+                                pickerTransformOrCropIndex = 0
                             }
                             else {
-                                py.croppingFunctionCoordinates()
+                                icon.source = "../symbols/icon-m-transform.svg"
+                                croppingRatio = 0
+                                setCropmarkersFullImage()
+                                pickerTransformOrCropIndex = 1
                             }
-                            presetCroppingFree()
-                        }
-                        if ( pickerTransformOrCropIndex !== 0 ) {
-                            finishedLoading = false
-                            if (idComboBoxFoldStretch.currentIndex === 0) {
-                                transformPerspectiveMode = "stretch"
-                            }
-                            else {
-                                transformPerspectiveMode = "fold"
-                            }
-                            py.perspectiveCorrection()
                         }
                     }
-                }
+                    ComboBox {
+                        id: idComboBoxFoldStretch
+                        enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
+                        visible: ( pickerTransformOrCropIndex !== 0 ) ? true: false
+                        width: parent.width * 3/4
+                        menu: ContextMenu {
+                            MenuItem {
+                                text: qsTr("stretch to edges")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                            }
+                            MenuItem {
+                                text: qsTr("fold from edges")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                            }
+                        }
+                    }
+                    ComboBox {
+                        id: idComboBoxCrop
+                        enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
+                        visible: ( pickerTransformOrCropIndex === 0 ) ? true: false
+                        width: parent.width / 2
+                        menu: ContextMenu {
+                            MenuItem {
+                                text: qsTr("free crop")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 0
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersFullImage()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("original")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    // original ration of cropping zone, takes handles into account
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    croppingRatio = (idItemCropzoneHandles.width - handleWidth) / (idItemCropzoneHandles.height - handleHeight)
+                                    setCropmarkersFullImage()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("manual")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 1
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    idCropInputRatioHeight.text = placeholderManualCrop
+                                    idCropInputRatioWidth.text = placeholderManualCrop
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("DIN-landscape")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 1754/1240
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("DIN-portrait")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 1240/1754
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("4:3")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 4/3
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("3:4")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 3/4
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("16:10")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 16/10
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("10:16")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 10/16
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
 
+                            MenuItem {
+                                text: qsTr("16:9")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 16/9
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("9:16")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 9/16
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("21:9")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 21/9
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("9:21")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 9/21
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("1:1")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 1
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("2:1")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 2/1
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("1:2")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 1/2
+                                    handleWidth = 2 * Theme.paddingLarge
+                                    handleHeight = 2 * Theme.paddingLarge
+                                    setCropmarkersRatio()
+                                }
+                            }
+                            MenuItem {
+                                text: qsTr("pixels")
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                onClicked: {
+                                    croppingRatio = 0
+                                    handleWidth = 1
+                                    handleHeight = 1
+                                    setCropmarkersFullImage()
+                                    idInputManualX1.text = 0
+                                    idInputManualY1.text = 0
+                                    idInputManualX2.text = idImageLoadedFreecrop.sourceSize.width
+                                    idInputManualY2.text = idImageLoadedFreecrop.sourceSize.height
+                                }
+                            }
+                        }
+                    }
+                    IconButton {
+                        id: invertRatioButton
+                        enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
+                        visible: ( pickerTransformOrCropIndex === 0 )  ? true: false
+                        width: parent.width / 4
+                        height: Theme.itemSizeSmall
+                        icon.source: "image://theme/icon-m-rotate-left?"
+                        onClicked: {
+                            croppingRatio = 1 / croppingRatio
+                            setCropmarkersRatio()
 
-                Item {
-                    visible: ( ((idComboBoxCrop.currentIndex === 2) || (idComboBoxCrop.currentIndex === 12) ) && pickerTransformOrCropIndex === 0 ) ? true : false
-                    width: parent.width / itemsPerRow
-                    height: Theme.iconSizeSmall
+                        }
+                    }
+                    IconButton {
+                        id: cropButton
+                        enabled: ( (idCropInputRatioWidth.text !== "" && idCropInputRatioHeight.text !== "" && idInputManualX1.text !== "" && idInputManualX2.text !== "" && idInputManualY1.text !== "" && idInputManualY2.text !== "" ) && ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true )) ? true : false
+                        width: parent.width / 8
+                        height: Theme.itemSizeSmall
+                        icon.source: "../symbols/icon-m-apply.svg"
+                        icon.width: Theme.iconSizeMedium
+                        icon.height: Theme.iconSizeMedium
+                        onClicked: {
+                            if ( pickerTransformOrCropIndex === 0  ) {
+                                finishedLoading = false
+                                if ( idComboBoxCrop.currentIndex !== 16) {
+                                    py.croppingFunctionHandles()
+                                }
+                                else {
+                                    py.croppingFunctionCoordinates()
+                                }
+                                presetCroppingFree()
+                            }
+                            if ( pickerTransformOrCropIndex !== 0 ) {
+                                finishedLoading = false
+                                if (idComboBoxFoldStretch.currentIndex === 0) {
+                                    transformPerspectiveMode = "stretch"
+                                }
+                                else {
+                                    transformPerspectiveMode = "fold"
+                                }
+                                py.perspectiveCorrection()
+                            }
+                        }
+                    }
                 }
                 Row {
                     id: idCropInputManual
                     x: Theme.paddingLarge
-                    width: parent.width / itemsPerRow * (itemsPerRow-2)
+                    width: parent.width
                     visible: (idComboBoxCrop.currentIndex === 2 && pickerTransformOrCropIndex === 0 ) ? true : false
                     enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
                     height: Theme.itemSizeMedium * 1.1
+                    Item {
+                        visible: true
+                        width: parent.width / 8
+                        height: Theme.iconSizeSmall
+                    }
 
                     TextField {
                         id: idCropInputRatioWidth
@@ -2740,18 +2781,23 @@ Page {
                         }
                     }
                 }
-
                 Row {
                     id: idCropInputCoordinates
                     x: Theme.paddingLarge
-                    width: parent.width / itemsPerRow * (itemsPerRow-2)
-                    visible: ( buttonCrop.down && idComboBoxCrop.currentIndex === 12 && pickerTransformOrCropIndex === 0 ) ? true : false
+                    width:parent.width
+
+                    visible: ( buttonCrop.down && idComboBoxCrop.currentIndex === 16 && pickerTransformOrCropIndex === 0 ) ? true : false
                     enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
                     height: Theme.itemSizeMedium * 1.1
+                    Item {
+                        visible: true
+                        width: parent.width / 8
+                        height: Theme.iconSizeSmall
+                    }
 
                     TextField {
                         id: idInputManualX1
-                        width: parent.width / 2
+                        width: parent.width / 4
                         anchors.verticalCenter: parent.verticalCenter
                         text: "0"
                         label: qsTr("point 1x")
@@ -2766,7 +2812,7 @@ Page {
                     }
                     TextField {
                         id: idInputManualX2
-                        width: parent.width / 2
+                        width: parent.width / 4
                         anchors.verticalCenter: parent.verticalCenter
                         text: idImageLoadedFreecrop.sourceSize.width
                         label: qsTr("point 2x")
@@ -2781,27 +2827,22 @@ Page {
                         }
                     }
                 }
-                Item {
-                    visible: ( ((idComboBoxCrop.currentIndex === 2) || (idComboBoxCrop.currentIndex === 12) ) && pickerTransformOrCropIndex === 0 ) ? true : false
-                    width: parent.width / itemsPerRow
-                    height: Theme.iconSizeSmall
-                }
-                Item {
-                    visible: ( ((idComboBoxCrop.currentIndex === 2) || (idComboBoxCrop.currentIndex === 12) ) && pickerTransformOrCropIndex === 0 ) ? true : false
-                    width: parent.width / itemsPerRow
-                    height: Theme.iconSizeSmall
-                }
                 Row {
                     id: idCropInputCoordinates2
                     x: Theme.paddingLarge
-                    width: parent.width / itemsPerRow * (itemsPerRow-2)
-                    visible: ( buttonCrop.down && idComboBoxCrop.currentIndex === 12 && pickerTransformOrCropIndex === 0 ) ? true : false
+                    width: parent.width
+                    visible: ( buttonCrop.down && idComboBoxCrop.currentIndex === 16 && pickerTransformOrCropIndex === 0 ) ? true : false
                     enabled: ( idImageLoadedFreecrop.status !== Image.Null && finishedLoading === true ) ? true : false
                     height: Theme.itemSizeMedium * 1.1
 
+                    Item {
+                        visible: true
+                        width: parent.width / 8
+                        height: Theme.iconSizeSmall
+                    }
                     TextField {
                         id: idInputManualY1
-                        width: parent.width / 2
+                        width: parent.width / 4
                         anchors.verticalCenter: parent.verticalCenter
                         text: "0"
                         label: qsTr("point 1y")
@@ -2816,7 +2857,7 @@ Page {
                     }
                     TextField {
                         id: idInputManualY2
-                        width: parent.width / 2
+                        width: parent.width / 4
                         anchors.verticalCenter: parent.verticalCenter
                         text: idImageLoadedFreecrop.sourceSize.height
                         label: qsTr("point 2y")
