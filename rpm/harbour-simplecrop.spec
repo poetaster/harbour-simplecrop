@@ -21,7 +21,7 @@ Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   pyotherside-qml-plugin-python3-qt5
 Requires:   libsailfishapp-launcher
-Requires:   python3dist(pillow)
+Requires:   python3-imaging
 
 #%if "%{sailfishos_version}" < "40000"
 #Requires:   python-imaging

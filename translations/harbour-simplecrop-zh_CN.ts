@@ -1197,6 +1197,22 @@
         <source>Mono regular</source>
         <translation>Mono 常规</translation>
     </message>
+    <message>
+        <source>10:16</source>
+        <translation type="unfinished">4k {10:16?}</translation>
+    </message>
+    <message>
+        <source>9:16</source>
+        <translation type="unfinished">4k {9:16?}</translation>
+    </message>
+    <message>
+        <source>9:21</source>
+        <translation type="unfinished">4k {9:21?}</translation>
+    </message>
+    <message>
+        <source>2:1</source>
+        <translation type="unfinished">4k {2:1?}</translation>
+    </message>
 </context>
 <context>
     <name>InfoPage</name>

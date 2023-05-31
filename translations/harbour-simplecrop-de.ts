@@ -1197,6 +1197,22 @@
         <source>Mono regular</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>10:16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>9:16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>9:21</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2:1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>InfoPage</name>
